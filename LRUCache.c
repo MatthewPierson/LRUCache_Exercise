@@ -44,9 +44,11 @@ int setNodeTotal(LRUCache* q, int nodeTotal) {
     if (!q) {
         return -2;
     }
+    // Check if the given number of total Nodes is smaller than 0 or larger than the caches set capacity
     if (nodeTotal < 0 || nodeTotal > q->capacity) {
         return -1;
     }
+    // Set the new total number of Nodes for the cache
     q->nodeTotal = nodeTotal;
     return 0;
 }
