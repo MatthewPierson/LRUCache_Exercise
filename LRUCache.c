@@ -27,9 +27,11 @@ int setCapacity(LRUCache* q, int capacity) {
     if (!q) {
         return -2;
     }
+    // Check if given capacity is smaller or larger than outlined in the constraints
     if (capacity < 1 || capacity > 100000) {
         return -1;
     }
+    // Set the new capacity for the cache
     q->capacity = capacity;
     return 0;
 }
